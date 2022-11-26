@@ -23,7 +23,7 @@ static bool check_dal_plugin()
 	NSString *dalPluginDestinationPath =
 		@"/Library/CoreMediaIO/Plug-Ins/DAL/";
 	NSString *dalPluginFileName =
-		@"/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin";
+		@"/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin2";
 
 	BOOL dalPluginDirExists =
 		[fileManager fileExistsAtPath:dalPluginDestinationPath];
@@ -35,7 +35,7 @@ static bool check_dal_plugin()
 		NSDictionary *dalPluginInfoPlist = [NSDictionary
 			dictionaryWithContentsOfURL:
 				[NSURL fileURLWithPath:
-						@"/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin/Contents/Info.plist"]];
+						@"/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin2/Contents/Info.plist"]];
 		NSString *dalPluginVersion = [dalPluginInfoPlist
 			valueForKey:@"CFBundleShortVersionString"];
 		NSString *dalPluginBuild =
@@ -55,7 +55,7 @@ static bool check_dal_plugin()
 
 		NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
 		NSString *pluginPath =
-			@"Contents/Resources/obs-mac-virtualcam.plugin";
+			@"Contents/Resources/obs-mac-virtualcam.plugin2";
 
 		NSURL *pluginUrl =
 			[bundleURL URLByAppendingPathComponent:pluginPath];

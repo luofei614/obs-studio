@@ -86,12 +86,12 @@ if(EXISTS
 endif()
 
 if(EXISTS
-   "${CMAKE_INSTALL_PREFIX}/${_BUNDLENAME}/Contents/Resources/obs-mac-virtualcam.plugin"
+   "${CMAKE_INSTALL_PREFIX}/${_BUNDLENAME}/Contents/Resources/obs-mac-virtualcam2.plugin"
 )
   list(
     APPEND
     _OTHER_BINARIES
-    "${CMAKE_INSTALL_PREFIX}/${_BUNDLENAME}/Contents/Resources/obs-mac-virtualcam.plugin"
+    "${CMAKE_INSTALL_PREFIX}/${_BUNDLENAME}/Contents/Resources/obs-mac-virtualcam2.plugin"
   )
 endif()
 

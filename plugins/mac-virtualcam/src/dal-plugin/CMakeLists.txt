@@ -8,11 +8,11 @@ find_library(IOSURFACE IOSurface)
 
 mark_as_advanced(COCOA COREMEDIA COREMEDIAIO COREVIDEO IOSURFACE)
 
-add_library(mac-dal-plugin MODULE)
-add_library(OBS::mac-dal-plugin ALIAS mac-dal-plugin)
+add_library(mac-dal-plugin2 MODULE)
+add_library(OBS::mac-dal-plugin2 ALIAS mac-dal-plugin2)
 
 target_sources(
-  mac-dal-plugin
+  mac-dal-plugin2
   PRIVATE OBSDALPlugIn.mm
           OBSDALPlugIn.h
           OBSDALPlugInMain.mm
@@ -33,26 +33,26 @@ target_sources(
           ${CMAKE_CURRENT_SOURCE_DIR}/../common/MachProtocol.h)
 
 target_include_directories(
-  mac-dal-plugin
+  mac-dal-plugin2
   PRIVATE "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>/../common")
 
-target_compile_options(mac-dal-plugin PRIVATE -fobjc-arc -fobjc-weak)
+target_compile_options(mac-dal-plugin2 PRIVATE -fobjc-arc -fobjc-weak)
 
 target_link_libraries(
-  mac-dal-plugin PRIVATE ${COCOA} ${COREMEDIA} ${COREMEDIAIO} ${COREVIDEO}
+  mac-dal-plugin2 PRIVATE ${COCOA} ${COREMEDIA} ${COREMEDIAIO} ${COREVIDEO}
                          ${IOSURFACE})
 
 set(MACOSX_PLUGIN_BUNDLE_TYPE "BNDL")
-target_sources(mac-dal-plugin PRIVATE placeholder.png)
+target_sources(mac-dal-plugin2 PRIVATE placeholder.png)
 set_source_files_properties(placeholder.png PROPERTIES MACOSX_PACKAGE_LOCATION
                                                        "Resources")
 source_group("Resources" FILES placeholder.png)
 
 set_target_properties(
-  mac-dal-plugin
+  mac-dal-plugin2
   PROPERTIES BUNDLE ON
              BUNDLE_EXTENSION "plugin"
-             OUTPUT_NAME "obs-mac-virtualcam"
+             OUTPUT_NAME "obs-mac-virtualcam2"
              FOLDER "plugins"
              VERSION "0"
              SOVERSION "0"
@@ -64,4 +64,4 @@ set_target_properties(
              MACOSX_BUNDLE_INFO_PLIST
              "${CMAKE_SOURCE_DIR}/cmake/bundle/macOS/Virtualcam-Info.plist.in")
 
-setup_binary_target(mac-dal-plugin)
+setup_binary_target(mac-dal-plugin2)

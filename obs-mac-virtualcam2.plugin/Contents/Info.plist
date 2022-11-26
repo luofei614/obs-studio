@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>${MACOSX_PLUGIN_BUNDLE_NAME}</string>
+	<string>mac-dal-plugin2</string>
 	<key>CFBundleIdentifier</key>
-	<string>${MACOSX_PLUGIN_GUI_IDENTIFIER}</string>
+	<string>com.obsproject.mac-dal-plugin2</string>
 	<key>CFBundleVersion</key>
-	<string>${MACOSX_PLUGIN_BUNDLE_VERSION}</string>
+	<string>15</string>
 	<key>CFBundleShortVersionString</key>
-	<string>${MACOSX_PLUGIN_SHORT_VERSION_STRING}</string>
+	<string>29.0.0</string>
 	<key>CFBundleExecutable</key>
 	<string>obs-mac-virtualcam2</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
-	<string>${MACOSX_PLUGIN_BUNDLE_TYPE}</string>
+	<string>BNDL</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>LSMinimumSystemVersion</key>
-	<string>${CMAKE_OSX_DEPLOYMENT_TARGET}</string>
+	<string>11.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>(c) 2012-${CURRENT_YEAR} Hugh Bailey</string>
+	<string>(c) 2012-2022 Hugh Bailey</string>
 	<key>CFPlugInFactories</key>
 	<dict>
 		<key>CC9EF7CC-1F35-4DD3-9AC1-7ECB3515EAF5</key>

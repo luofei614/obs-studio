@@ -27,7 +27,7 @@ function(setup_binary_target target)
     setup_framework_target(${target})
     set_property(GLOBAL APPEND PROPERTY OBS_FRAMEWORK_LIST "${target}")
   elseif(NOT ${target} STREQUAL obs-ffmpeg-mux AND NOT ${target} STREQUAL
-                                                   mac-dal-plugin)
+                                                   mac-dal-plugin2)
     set_property(GLOBAL APPEND PROPERTY OBS_FRAMEWORK_LIST "${target}")
   endif()
 endfunction()
@@ -321,11 +321,11 @@ function(setup_obs_modules target)
 
   endif()
 
-  if(TARGET mac-dal-plugin)
-    add_dependencies(${target} mac-dal-plugin)
+  if(TARGET mac-dal-plugin2)
+    add_dependencies(${target} mac-dal-plugin2)
 
     install(
-      TARGETS mac-dal-plugin
+      TARGETS mac-dal-plugin2
       LIBRARY DESTINATION "Resources"
               COMPONENT obs_plugin_dev
               EXCLUDE_FROM_ALL)
